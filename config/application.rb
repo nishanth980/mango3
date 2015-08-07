@@ -1,62 +1,25 @@
-require File.expand_path('../boot', __FILE__)
-
-require 'rails/all'
-
-if defined?(Bundler)
-  # If you precompile assets before deploying to production, use this line
-  Bundler.require(*Rails.groups(:assets => %w(development test)))
-  # If you want your assets lazily compiled in production, use this line
-  # Bundler.require(:default, :assets, Rails.env)
-end
-
-module Mango3
-  class Application < Rails::Application
-    # Settings in config/environments/* take precedence over those specified here.
-    # Application configuration should go into files in config/initializers
-    # -- all .rb files in that directory are automatically loaded.
-
-    # Custom directories with classes and modules you want to be autoloadable.
-    # config.autoload_paths += %W(#{config.root}/extras)
-
-    # Only load the plugins named here, in the order given (default is alphabetical).
-    # :all can be used as a placeholder for all plugins not explicitly named.
-    # config.plugins = [ :exception_notification, :ssl_requirement, :all ]
-
-    # Activate observers that should always be running.
-    # config.active_record.observers = :cacher, :garbage_collector, :forum_observer
-
-    # Set Time.zone default to the specified zone and make Active Record auto-convert to this zone.
-    # Run "rake -D time" for a list of tasks for finding time zone names. Default is UTC.
-    # config.time_zone = 'Central Time (US & Canada)'
-
-    # The default locale is :en and all translations from config/locales/*.rb,yml are auto loaded.
-    # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}').to_s]
-    # config.i18n.default_locale = :de
-
-    # Configure the default encoding used in templates for Ruby 1.9.
-    config.encoding = "utf-8"
-
-    # Configure sensitive parameters which will be filtered from the log file.
-    config.filter_parameters += [:password]
-
-    # Enable escaping HTML in JSON.
-    config.active_support.escape_html_entities_in_json = true
-
-    # Use SQL instead of Active Record's schema dumper when creating the database.
-    # This is necessary if your schema can't be completely dumped by the schema dumper,
-    # like if you have constraints or database-specific column types
-    # config.active_record.schema_format = :sql
-
-    # Enforce whitelist mode for mass assignment.
-    # This will create an empty whitelist of attributes available for mass-assignment for all models
-    # in your app. As such, your models will need to explicitly whitelist or blacklist accessible
-    # parameters by using an attr_accessible or attr_protected declaration.
-    config.active_record.whitelist_attributes = true
-
-    # Enable the asset pipeline
-    config.assets.enabled = true
-
-    # Version of your assets, change this if you want to expire all your assets
-    config.assets.version = '1.0'
-  end
-end
+{"timestamp"=>1427719255879, "webhookEvent"=>"jira:issue_created", "user"=>{"self"=>"https://uimail.atlassian.net/rest/api/2/user?username=nishanth", "name"=>"nishanth", "key"=>"nishanth", "emailAddress"=>"nishanth.mosam@gmail.com", "avatarUrls"=>{"48x48"=>"https://secure.gravatar.com/avatar/d04c1ce0c0a57404e8c8c5de33995b79?d=mm&s=48", "24x24"=>"https://secure.gravatar.com/avatar/d04c1ce0c0a57404e8c8c5de33995b79?d=mm&s=24", "16x16"=>"https://secure.gravatar.com/avatar/d04c1ce0c0a57404e8c8c5de33995b79?d=mm&s=16", "32x32"=>"https://secure.gravatar.com/avatar/d04c1ce
+0c0a57404e8c8c5de33995b79?d=mm&s=32"}, "displayName"=>"nishanth mosam [Administrator]", "active"=>true, "timeZone"=>"Asia/Kolkata"}, "issue"=>{"id"=>"10005", "self"=>"https://uimail.atlassian.net/rest/api/
+2/issue/10005", "key"=>"DR-6", "fields"=>{"issuetype"=>{"self"=>"https://uimail.atlassian.net/rest/api/2/issuetype/3", "id"=>"3", "description"=>"A task that needs to be done.", "iconUrl"=>"https://uimail.
+atlassian.net/images/icons/issuetypes/task.png", "name"=>"Task", "subtask"=>false}, "timespent"=>nil, "project"=>{"self"=>"https://uimail.atlassian.net/rest/api/2/project/10000", "id"=>"10000", "key"=>"DR"
+, "name"=>"demo project", "avatarUrls"=>{"48x48"=>"https://uimail.atlassian.net/secure/projectavatar?avatarId=10011", "24x24"=>"https://uimail.atlassian.net/secure/projectavatar?size=small&avatarId=10011",
+ "16x16"=>"https://uimail.atlassian.net/secure/projectavatar?size=xsmall&avatarId=10011", "32x32"=>"https://uimail.atlassian.net/secure/projectavatar?size=medium&avatarId=10011"}}, "fixVersions"=>nil, "agg
+regatetimespent"=>nil, "resolution"=>nil, "resolutiondate"=>nil, "workratio"=>-1, "lastViewed"=>nil, "watches"=>{"self"=>"https://uimail.atlassian.net/rest/api/2/issue/DR-6/watchers", "watchCount"=>0, "isW
+atching"=>false}, "created"=>"2015-03-30T18:10:55.776+0530", "customfield_10020"=>nil, "customfield_10021"=>nil, "customfield_10022"=>nil, "priority"=>{"self"=>"https://uimail.atlassian.net/rest/api/2/prio
+rity/3", "iconUrl"=>"https://uimail.atlassian.net/images/icons/priorities/medium.png", "name"=>"Medium", "id"=>"3"}, "customfield_10023"=>"Not Started", "customfield_10024"=>nil, "labels"=>nil, "customfiel
+d_10016"=>nil, "customfield_10017"=>nil, "customfield_10018"=>nil, "customfield_10019"=>nil, "timeestimate"=>nil, "aggregatetimeoriginalestimate"=>nil, "versions"=>nil, "issuelinks"=>nil, "assignee"=>nil, 
+"updated"=>"2015-03-30T18:10:55.776+0530", "status"=>{"self"=>"https://uimail.atlassian.net/rest/api/2/status/10000", "description"=>"", "iconUrl"=>"https://uimail.atlassian.net/images/icons/statuses/open.
+png", "name"=>"To Do", "id"=>"10000", "statusCategory"=>{"self"=>"https://uimail.atlassian.net/rest/api/2/statuscategory/2", "id"=>2, "key"=>"new", "colorName"=>"blue-gray", "name"=>"To Do"}}, "components"
+=>nil, "timeoriginalestimate"=>nil, "description"=>"this is for testing ", "customfield_10012"=>"0|i00013:", "customfield_10013"=>nil, "customfield_10014"=>nil, "timetracking"=>{}, "customfield_10015"=>nil
+, "customfield_10007"=>nil, "customfield_10008"=>nil, "attachment"=>nil, "aggregatetimeestimate"=>nil, "summary"=>"third test", "creator"=>{"self"=>"https://uimail.atlassian.net/rest/api/2/user?username=ni
+shanth", "name"=>"nishanth", "key"=>"nishanth", "emailAddress"=>"nishanth.mosam@gmail.com", "avatarUrls"=>{"48x48"=>"https://secure.gravatar.com/avatar/d04c1ce0c0a57404e8c8c5de33995b79?d=mm&s=48", "24x24"=
+>"https://secure.gravatar.com/avatar/d04c1ce0c0a57404e8c8c5de33995b79?d=mm&s=24", "16x16"=>"https://secure.gravatar.com/avatar/d04c1ce0c0a57404e8c8c5de33995b79?d=mm&s=16", "32x32"=>"https://secure.gravatar
+.com/avatar/d04c1ce0c0a57404e8c8c5de33995b79?d=mm&s=32"}, "displayName"=>"nishanth mosam [Administrator]", "active"=>true, "timeZone"=>"Asia/Kolkata"}, "subtasks"=>nil, "reporter"=>{"self"=>"https://uimail
+.atlassian.net/rest/api/2/user?username=nishanth", "name"=>"nishanth", "key"=>"nishanth", "emailAddress"=>"nishanth.mosam@gmail.com", "avatarUrls"=>{"48x48"=>"https://secure.gravatar.com/avatar/d04c1ce0c0a
+57404e8c8c5de33995b79?d=mm&s=48", "24x24"=>"https://secure.gravatar.com/avatar/d04c1ce0c0a57404e8c8c5de33995b79?d=mm&s=24", "16x16"=>"https://secure.gravatar.com/avatar/d04c1ce0c0a57404e8c8c5de33995b79?d=m
+m&s=16", "32x32"=>"https://secure.gravatar.com/avatar/d04c1ce0c0a57404e8c8c5de33995b79?d=mm&s=32"}, "displayName"=>"nishanth mosam [Administrator]", "active"=>true, "timeZone"=>"Asia/Kolkata"}, "customfiel
+d_10000"=>nil, "aggregateprogress"=>{"progress"=>0, "total"=>0}, "customfield_10001"=>nil, "customfield_10002"=>nil, "customfield_10003"=>nil, "customfield_10004"=>nil, "environment"=>nil, "duedate"=>nil, 
+"progress"=>{"progress"=>0, "total"=>0}, "comment"=>{"startAt"=>0, "maxResults"=>0, "total"=>0, "comments"=>nil}, "votes"=>{"self"=>"https://uimail.atlassian.net/rest/api/2/issue/DR-6/votes", "votes"=>0, "
+hasVoted"=>false}, "worklog"=>{"startAt"=>0, "maxResults"=>20, "total"=>0, "worklogs"=>nil}}}, "user_id"=>"nishanth", "user_key"=>"nishanth", "hook"=>{"timestamp"=>1427719255879, "webhookEvent"=>"jira:issu
+e_created", "user"=>{"self"=>"https://uimail.atlassian.net/rest/api/2/user?username=nishanth", "name"=>"nishanth", "key"=>"nishanth", "emailAddress"=>"nishanth.mosam@gmail.com", "avatarUrls"=>{"48x48"=>"ht
+tps://secure.gravatar.com/avatar/d04c1ce0c0a57404e8c8c5de33995b79?d=mm&s=48", "24x24"=>"https://secure.gravatar.com/avatar/d04c1ce0c0a57404e8c8c5de33995b79?d=mm&s=24", "16x16"=>"https://secure.gravatar.com/avatar/d04c1ce0c0a57404e8c8c5de33995b79?d=mm&s=16", "32x32"=>"https://secure.gravatar.com/avatar/d04c1ce0c0a57404e8c8c5de33995b79?d=mm&s=32"}, "displayName"=>"nishanth mosam [Administrator]", "active"=>true, "timeZone"=>"Asia/Kolkata"}, "issue"=>{"id"=>"10005", "self"=>"https://uimail.atlassian.net/rest/api/2/issue/10005", "key"=>"DR-6", "fields"=>{"issuetype"=>{"self"=>"https://uimail.atlassian.net/rest/api/2/issuetype/3", "id"=>"3", "description"=>"A task that needs to be done.", "iconUrl"=>"https://uimail.atlassian.net/images/icons/issuetypes/task.png", "name"=>"Task", "subtask"=>false}, "timespent"=>nil, "project"=>{"self"=>"https://uimail.atlassian.net/rest/api/2/project/10000", "id"=>"10000", "key"=>"DR", "name"=>"demo project", "avatarUrls"=>{"48x48"=>"https://uimail.atlassian.net/secure/projectavatar?avatarId=10011", "24x24"=>"https://uimail.atlassian.net/secure/projectavatar?size=small&avatarId=10011", "16x16"=>"https://uimail.atlassian.net/secure/projectavatar?size=xsmall&avatarId=10011", "32x32"=>"https://uimail.atlassian.net/secure/projectavatar?size=medium&avatarId=10011"}}, "fixVersions"=>nil, "aggregatetimespent"=>nil, "resolution"=>nil, "resolutiondate"=>nil, "workratio"=>-1, "lastViewed"=>nil, "watches"=>{"self"=>"https://uimail.atlassian.net/rest/api/2/issue/DR-6/watchers", "watchCount"=>0, "isWatching"=>false}, "created"=>"2015-03-30T18:10:55.776+0530", "customfield_10020"=>nil, "customfield_10021"=>nil, "customfield_10022"=>nil, "priority"=>{"self"=>"https://uimail.atlassian.net/rest/api/2/priority/3", "iconUrl"=>"https://uimail.atlassian.net/images/icons/priorities/medium.png", "name"=>"Medium", "id"=>"3"}, "customfield_10023"=>"Not Started", "customfield_10024"=>nil, "labels"=>nil, "customfield_10016"=>nil, "customfield_10017"=>nil, "customfield_10018"=>nil, "customfield_10019"=>nil, "timeestimate"=>nil, "aggregatetimeoriginalestimate"=>nil, "versions"=>nil, "issuelinks"=>nil, "assignee"=>nil, "updated"=>"2015-03-30T18:10:55.776+0530", "status"=>{"self"=>"https://uimail.atlassian.net/rest/api/2/status/10000", "description"=>"", "iconUrl"=>"https://uimail.atlassian.net/images/icons/statuses/open.png", "name"=>"To Do", "id"=>"10000", "statusCategory"=>{"self"=>"https://uimail.atlassian.net/rest/api/2/statuscategory/2", "id"=>2, "key"=>"new", "colorName"=>"blue-gray", "name"=>"To Do"}}, "components"=>nil, "timeoriginalestimate"=>nil, "description"=>"this is for testing ", "customfield_10012"=>"0|i00013:", "customfield_10013"=>nil, "customfield_10014"=>nil, "timetracking"=>{}, "customfield_10015"=>nil, "customfield_10007"=>nil, "customfield_10008"=>nil, "attachment"=>nil, "aggregatetimeestimate"=>nil, "summary"=>"third test", "creator"=>{"self"=>"https://uimail.atlassian.net/rest/api/2/user?username=nishanth", "name"=>"nishanth", "key"=>"nishanth", "emailAddress"=>"nishanth.mosam@gmail.com", "avatarUrls"=>{"48x48"=>"https://secure.gravatar.com/avatar/d04c1ce0c0a57404e8c8c5de33995b79?d=mm&s=48", "24x24"=>"https://secure.gravatar.com/avatar/d04c1ce0c0a57404e8c8c5de33995b79?d=mm&s=24", "16x16"=>"https://secure.gravatar.com/avatar/d04c1ce0c0a57404e8c8c5de33995b79?d=mm&s=16", "32x32"=>"https://secure.gravatar.com/avatar/d04c1ce0c0a57404e8c8c5de33995b79?d=mm&s=32"}, "displayName"=>"nishanth mosam [Administrator]", "active"=>true, "timeZone"=>"Asia/Kolkata"}, "subtasks"=>nil, "reporter"=>{"self"=>"https://uimail.atlassian.net/rest/api/2/user?username=nishanth", "name"=>"nishanth", "key"=>"nishanth", "emailAddress"=>"nishanth.mosam@gmail.com", "avatarUrls"=>{"48x48"=>"https://secure.gravatar.com/avatar/d04c1ce0c0a57404e8c8c5de33995b79?d=mm&s=48", "24x24"=>"https://secure.gravatar.com/avatar/d04c1ce0c0a57404e8c8c5de33995b79?d=mm&s=24", "16x16"=>"https://secure.gravatar.com/avatar/d04c1ce0c0a57404e8c8c5de33995b79?d=mm&s=16", "32x32"=>"https://secure.gravatar.com/avatar/d04c1ce0c0a57404e8c8c5de33995b79?d=mm&s=32"}, "displayName"=>"nishanth mosam [Administrator]", "active"=>true, "timeZone"=>"Asia/Kolkata"}, "customfield_10000"=>nil, "aggregateprogress"=>{"progress"=>0, "total"=>0}, "customfield_10001"=>nil, "customfield_10002"=>nil, "customfield_10003"=>nil, "customfield_10004"=>nil, "environment"=>nil, "duedate"=>nil, "progress"=>{"progress"=>0, "total"=>0}, "comment"=>{"startAt"=>0, "maxResults"=>0, "total"=>0, "comments"=>nil}, "votes"=>{"self"=>"https://uimail.atlassian.net/rest/api/2/issue/DR-6/votes", "votes"=>0, "hasVoted"=>false}, "worklog"=>{"startAt"=>0, "maxResults"=>20, "total"=>0, "worklogs"=>nil}}}}}

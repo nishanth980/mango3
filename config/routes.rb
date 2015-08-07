@@ -1,4 +1,22 @@
 Mango3::Application.routes.draw do
+  resources :line_items
+
+
+  resources :orders
+
+
+  resources :customers
+
+
+  resources :appointments
+
+
+  resources :patients
+
+
+  resources :doctors
+
+
   resources :products
 
 
